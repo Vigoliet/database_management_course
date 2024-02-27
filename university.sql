@@ -40,5 +40,37 @@ FOREIGN KEY (course_id) REFERENCES courses (course_id)
 
 
 
+INSERT INTO universities (university_name, adress, phone, email) VALUES
+("Jensen U", "Kista 33a", NULL, "jensen.u@jensen.se"),
+("JU", "Gjuterigatan", "076-312 34 56", NULL),
+("Science Uni", "Framgången 1", NULL, NULL);
+
+SELECT * FROM universities;
+
+INSERT INTO courses(university_id, course_name, teacher, credits) VALUES
+(1, "Systematiskt", "Linus", 50),
+(1, "Databashantering", "Marta", 25),
+(2, "Systematiskt", "Linus", 30);
+
+SELECT * FROM courses;
+
+INSERT INTO students(student_name, phone, email) VALUES
+("Linus", "07121342314", email),
+("Bob", NULL, "bob@jensen.se"),
+("Alice", NULL, "alice@jensen.se");
+
+SELECT * FROM courses;
+SELECT * FROM students;
+
+INSERT INTO student_course_grades (student_id, course_id, grade, start_date, end_date) VALUES
+(2, 3, "VG", "2022-03-14", "2022-04-14"),
+(2, 2, "G", "2022-04-15", "2022-05-30"),
+(3, 3, "VG", "2022-03-14", "2022-04-14");
+
+SELECT * FROM student_course_grades;
+
+
+
+
 
 
