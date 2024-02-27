@@ -67,7 +67,14 @@ INSERT INTO student_course_grades (student_id, course_id, grade, start_date, end
 (2, 2, "G", "2022-04-15", "2022-05-30"),
 (3, 3, "VG", "2022-03-14", "2022-04-14");
 
-SELECT * FROM student_course_grades;
+SELECT s.student_name, c.course_name, scg.grade, u.university_name
+	FROM student_course_grades AS scg
+    INNER JOIN students AS s ON s.student_id = scg.student_id
+    INNER JOIN courses AS c on c.course_id = scg.course_id
+    INNER JOIN universities AS u on u.university_id = c.university_id;
+    
+
+
 
 
 
