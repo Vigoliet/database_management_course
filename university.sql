@@ -40,7 +40,7 @@ FOREIGN KEY (course_id) REFERENCES courses (course_id)
 
 
 
-INSERT INTO universities (university_name, adress, phone, email) VALUES
+INSERT INTO universities (university_name, address, phone, email) VALUES
 ("Jensen U", "Kista 33a", NULL, "jensen.u@jensen.se"),
 ("JU", "Gjuterigatan", "076-312 34 56", NULL),
 ("Science Uni", "Framgången 1", NULL, NULL);
